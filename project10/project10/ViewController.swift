@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    var people = [Person] ()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +17,7 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return people.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -24,8 +26,19 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
             fatalError("kan geen PersonCell vinden.")
         }
 
+        let person = people[indexPath.item]
         
-        return cell
+        cell.name.text = person.name
+
+          let path = getDocumentsDirectory().appendingPathComponent(person.image)
+          cell.imageView.image = UIImage(contentsOfFile: path.path)
+
+          cell.imageView.layer.borderColor = UIColor(white: 0, alpha: 0.3).cgColor
+          cell.imageView.layer.borderWidth = 2
+          cell.imageView.layer.cornerRadius = 3
+          cell.layer.cornerRadius = 7
+
+          return cell
     }
     
     @objc func addNewPerson() {
@@ -36,7 +49,24 @@ class ViewController: UICollectionViewController, UIImagePickerControllerDelegat
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        <#code#>
+        guard let image = info[.editedImage] as? UIImage else {return}
+        
+        let imageName = UUID().uuidString
+        let imagePath = getDocumentsDirectory().appendingPathComponent(imageName)
+        
+        if let jpegData = image.jpegData(compressionQuality: 0.8) {
+            try? jpegData.write(to: imagePath)
+        }
+        
+        let person = Person(name: "onbekend", image: imageName)
+        people.append(person)
+        collectionView.reloadData()
+        
+        dismiss(animated: true)
+    }
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths [0]
     }
 }
 
