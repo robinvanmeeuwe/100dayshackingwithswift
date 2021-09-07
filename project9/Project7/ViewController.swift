@@ -13,29 +13,32 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        performSelector(inBackground: #selector(fetchJSON), with: nil)
-       
-        
-    }
-    
-    @objc func fetchJSON() {
         let urlString: String
-
+        
         if navigationController?.tabBarItem.tag == 0 {
             urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
         } else {
             urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
         }
+  
+        performSelector(inBackground: #selector(fetchJSON(urlString:)), with: urlString)
+    }
+    
+    @objc func fetchJSON(urlString: String) {
         
-            if let url = URL(string: urlString) {
-                if let data = try? Data(contentsOf: url) {
-                    parse(json: data)
-                    return
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url) {
+                DispatchQueue.main.async {
+                    self.parse(json: data)
                 }
+                
+                return
             }
-        performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
-            
         }
+        
+        performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
+    }
+    
     @objc func showError() {
         let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
