@@ -9,9 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var button1: UIButton!
-    @IBOutlet weak var button2: UIButton!
-    @IBOutlet weak var button3: UIButton!
+    @IBOutlet var button1: UIButton!
+    @IBOutlet var button2: UIButton!
+    @IBOutlet var button3: UIButton!
     
     var countries = [String]()
     var score = 0
@@ -31,11 +31,11 @@ class ViewController: UIViewController {
         button2.layer.borderColor = UIColor.lightGray.cgColor
         button3.layer.borderColor = UIColor.lightGray.cgColor
         
-        askQuestion(action: nil)
-        // Do any additional setup after loading the view, typically from a nib.
+        askQuestion()
+        
     }
     
-    func askQuestion(action: UIAlertAction!) {
+    func askQuestion(action: UIAlertAction! = nil) {
         countries.shuffle()
         correctAwnser = Int.random(in: 0...2)
         
