@@ -14,6 +14,7 @@
 		FE2C7A6C26E76B7B00D4F2FA /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2C7A6B26E76B7B00D4F2FA /* GameViewController.swift */; };
 		FE2C7A6F26E76B7B00D4F2FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2C7A6D26E76B7B00D4F2FA /* Main.storyboard */; };
 		FE2C7A7126E76B7C00D4F2FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2C7A7026E76B7C00D4F2FA /* Assets.xcassets */; };
+		FE94E1A126E7BA04008C032F /* FireParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = FE94E1A026E7BA04008C032F /* FireParticles.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FE2C7A6E26E76B7B00D4F2FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE2C7A7026E76B7C00D4F2FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE2C7A7226E76B7C00D4F2FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE94E1A026E7BA04008C032F /* FireParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = FireParticles.sks; path = "../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/F226F841-0093-4B10-9830-F070C6880C4D/Content/FireParticles.sks"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				FE2C7A6B26E76B7B00D4F2FA /* GameViewController.swift */,
 				FE2C7A6D26E76B7B00D4F2FA /* Main.storyboard */,
 				FE2C7A7026E76B7C00D4F2FA /* Assets.xcassets */,
+				FE94E1A026E7BA04008C032F /* FireParticles.sks */,
 				FE2C7A7226E76B7C00D4F2FA /* Info.plist */,
 			);
 			path = project11;
@@ -129,6 +132,7 @@
 			files = (
 				FE2C7A6F26E76B7B00D4F2FA /* Main.storyboard in Resources */,
 				FE2C7A6626E76B7B00D4F2FA /* GameScene.sks in Resources */,
+				FE94E1A126E7BA04008C032F /* FireParticles.sks in Resources */,
 				FE2C7A7126E76B7C00D4F2FA /* Assets.xcassets in Resources */,
 				FE2C7A6826E76B7B00D4F2FA /* Actions.sks in Resources */,
 			);
