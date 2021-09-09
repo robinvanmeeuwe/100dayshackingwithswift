@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         
         let savedInteger = defaults.integer(forKey: "age")
         let savedBoolean = defaults.bool(forKey: "UseFaceID")
-//        let savedCGFloat = defaults.CGFloat(forKey: "pi")
+        let savedCGFloat = defaults.float(forKey: "pi")
         let savedString = defaults.string(forKey: "Name")
         let savedDate = defaults.data(forKey: "LastRun")
         
