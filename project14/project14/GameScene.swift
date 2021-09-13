@@ -27,6 +27,7 @@ class GameScene: SKScene {
         addChild(background)
         
         gameScore = SKLabelNode(fontNamed: "Chalkduster")
+        gameScore.isHidden = false
         gameScore.text = "Score: 0"
         gameScore.position = CGPoint(x: 8, y: 8)
         gameScore.horizontalAlignmentMode = .left
@@ -96,6 +97,19 @@ class GameScene: SKScene {
             gameOver.position = CGPoint(x: 512, y: 384)
             gameOver.zPosition = 1
             addChild(gameOver)
+            
+            let finalScore = SKLabelNode(fontNamed: "Chalkduster")
+            finalScore.text = "je score is: \(score)"
+            finalScore.blendMode = .replace
+            finalScore.position = CGPoint(x: 512, y: 300)
+            finalScore.horizontalAlignmentMode = .center
+            finalScore.fontSize = 48
+            gameScore.isHidden = true
+            
+            run(SKAction.playSoundFileNamed("gameOver.m4a", waitForCompletion: false))
+            
+            finalScore.zPosition = 1
+            addChild(finalScore)
             
             return
         }
