@@ -16,20 +16,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c3L-ed-RQX">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="c3L-ed-RQX">
+                                <rect key="frame" x="0.0" y="88" width="414" height="674"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Op6-lL-Q9j"/>
+                                </connections>
                             </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jeM-N2-qI1">
+                                <rect key="frame" x="5" y="770" width="219" height="32"/>
+                                <segments>
+                                    <segment title="standaard"/>
+                                    <segment title="satalite"/>
+                                    <segment title="hybride"/>
+                                </segments>
+                                <connections>
+                                    <action selector="Maptype:" destination="BYZ-38-t0r" eventType="valueChanged" id="dt1-Us-rH6"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="c3L-ed-RQX" secondAttribute="bottom" constant="-34" id="0Mg-Au-tXe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jeM-N2-qI1" secondAttribute="trailing" constant="186" id="7G7-2e-G6Q"/>
                             <constraint firstItem="c3L-ed-RQX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Iz4-G7-Adl"/>
-                            <constraint firstItem="c3L-ed-RQX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jpo-qI-adM"/>
-                            <constraint firstItem="c3L-ed-RQX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="414" id="y6c-YW-Pll"/>
+                            <constraint firstItem="c3L-ed-RQX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aim-dl-0dm"/>
+                            <constraint firstItem="jeM-N2-qI1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="9" id="cdw-3r-vOe"/>
+                            <constraint firstItem="jeM-N2-qI1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="683" id="gIV-QX-9pJ"/>
+                            <constraint firstItem="c3L-ed-RQX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yj5-FI-Tk8"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="rjz-UD-6XO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="mapView" destination="c3L-ed-RQX" id="kCH-3R-f5f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
