@@ -13,7 +13,36 @@
 		FE3C5A4226F341E80070C49F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3C5A4026F341E80070C49F /* Main.storyboard */; };
 		FE3C5A4426F341E80070C49F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3C5A4326F341E80070C49F /* Assets.xcassets */; };
 		FE3C5A4726F341E80070C49F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3C5A4526F341E80070C49F /* LaunchScreen.storyboard */; };
+		FE3C5A5526F356830070C49F /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3C5A5426F356830070C49F /* Media.xcassets */; };
+		FE3C5A5726F356830070C49F /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE3C5A5626F356830070C49F /* ActionViewController.swift */; };
+		FE3C5A5A26F356830070C49F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3C5A5826F356830070C49F /* MainInterface.storyboard */; };
+		FE3C5A5E26F356830070C49F /* extention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FE3C5A5226F356830070C49F /* extention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		FE3C5A6426F363140070C49F /* Action.js in Resources */ = {isa = PBXBuildFile; fileRef = FE3C5A6326F363140070C49F /* Action.js */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE3C5A5C26F356830070C49F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE3C5A2F26F341E80070C49F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE3C5A5126F356830070C49F;
+			remoteInfo = extention;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE3C5A6226F356830070C49F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FE3C5A5E26F356830070C49F /* extention.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FE3C5A3726F341E80070C49F /* project19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = project19.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +53,24 @@
 		FE3C5A4326F341E80070C49F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE3C5A4626F341E80070C49F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE3C5A4826F341E80070C49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE3C5A5226F356830070C49F /* extention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = extention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE3C5A5426F356830070C49F /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		FE3C5A5626F356830070C49F /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		FE3C5A5926F356830070C49F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		FE3C5A5B26F356830070C49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE3C5A6326F363140070C49F /* Action.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Action.js; sourceTree = "<group>"; };
+		FE3C5A6526F36D9F0070C49F /* extention.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = extention.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FE3C5A3426F341E80070C49F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE3C5A4F26F356830070C49F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				FE3C5A3926F341E80070C49F /* project19 */,
+				FE3C5A5326F356830070C49F /* extention */,
 				FE3C5A3826F341E80070C49F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				FE3C5A3726F341E80070C49F /* project19.app */,
+				FE3C5A5226F356830070C49F /* extention.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +112,19 @@
 			path = project19;
 			sourceTree = "<group>";
 		};
+		FE3C5A5326F356830070C49F /* extention */ = {
+			isa = PBXGroup;
+			children = (
+				FE3C5A6526F36D9F0070C49F /* extention.entitlements */,
+				FE3C5A5426F356830070C49F /* Media.xcassets */,
+				FE3C5A5626F356830070C49F /* ActionViewController.swift */,
+				FE3C5A5826F356830070C49F /* MainInterface.storyboard */,
+				FE3C5A5B26F356830070C49F /* Info.plist */,
+				FE3C5A6326F363140070C49F /* Action.js */,
+			);
+			path = extention;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +135,34 @@
 				FE3C5A3326F341E80070C49F /* Sources */,
 				FE3C5A3426F341E80070C49F /* Frameworks */,
 				FE3C5A3526F341E80070C49F /* Resources */,
+				FE3C5A6226F356830070C49F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FE3C5A5D26F356830070C49F /* PBXTargetDependency */,
 			);
 			name = project19;
 			productName = project19;
 			productReference = FE3C5A3726F341E80070C49F /* project19.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FE3C5A5126F356830070C49F /* extention */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE3C5A5F26F356830070C49F /* Build configuration list for PBXNativeTarget "extention" */;
+			buildPhases = (
+				FE3C5A4E26F356830070C49F /* Sources */,
+				FE3C5A4F26F356830070C49F /* Frameworks */,
+				FE3C5A5026F356830070C49F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = extention;
+			productName = extention;
+			productReference = FE3C5A5226F356830070C49F /* extention.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -97,6 +174,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					FE3C5A3626F341E80070C49F = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					FE3C5A5126F356830070C49F = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
@@ -115,6 +195,7 @@
 			projectRoot = "";
 			targets = (
 				FE3C5A3626F341E80070C49F /* project19 */,
+				FE3C5A5126F356830070C49F /* extention */,
 			);
 		};
 /* End PBXProject section */
@@ -127,6 +208,16 @@
 				FE3C5A4726F341E80070C49F /* LaunchScreen.storyboard in Resources */,
 				FE3C5A4426F341E80070C49F /* Assets.xcassets in Resources */,
 				FE3C5A4226F341E80070C49F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE3C5A5026F356830070C49F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3C5A6426F363140070C49F /* Action.js in Resources */,
+				FE3C5A5526F356830070C49F /* Media.xcassets in Resources */,
+				FE3C5A5A26F356830070C49F /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +234,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE3C5A4E26F356830070C49F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE3C5A5726F356830070C49F /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE3C5A5D26F356830070C49F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE3C5A5126F356830070C49F /* extention */;
+			targetProxy = FE3C5A5C26F356830070C49F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FE3C5A4026F341E80070C49F /* Main.storyboard */ = {
@@ -160,6 +267,14 @@
 				FE3C5A4626F341E80070C49F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FE3C5A5826F356830070C49F /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FE3C5A5926F356830070C49F /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -284,6 +399,7 @@
 		FE3C5A4C26F341E80070C49F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +418,7 @@
 		FE3C5A4D26F341E80070C49F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -312,6 +429,44 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = socialdeal.project19;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FE3C5A6026F356830070C49F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = extention/extention.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = extention/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = socialdeal.project19.extention;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FE3C5A6126F356830070C49F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = extention/extention.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = extention/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = socialdeal.project19.extention;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -334,6 +489,15 @@
 			buildConfigurations = (
 				FE3C5A4C26F341E80070C49F /* Debug */,
 				FE3C5A4D26F341E80070C49F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE3C5A5F26F356830070C49F /* Build configuration list for PBXNativeTarget "extention" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE3C5A6026F356830070C49F /* Debug */,
+				FE3C5A6126F356830070C49F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
