@@ -13,6 +13,17 @@
 		FE16806826FCB2AD0065DAE3 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE16806726FCB2AD0065DAE3 /* GameViewController.swift */; };
 		FE16806B26FCB2AD0065DAE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE16806926FCB2AD0065DAE3 /* Main.storyboard */; };
 		FE16806D26FCB2AE0065DAE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE16806C26FCB2AE0065DAE3 /* Assets.xcassets */; };
+		FE16807F26FCB8D50065DAE3 /* whack.caf in Resources */ = {isa = PBXBuildFile; fileRef = FE16807426FCB8D50065DAE3 /* whack.caf */; };
+		FE16808026FCB8D50065DAE3 /* sliceFuse.sks in Resources */ = {isa = PBXBuildFile; fileRef = FE16807526FCB8D50065DAE3 /* sliceFuse.sks */; };
+		FE16808126FCB8D50065DAE3 /* launch.caf in Resources */ = {isa = PBXBuildFile; fileRef = FE16807626FCB8D50065DAE3 /* launch.caf */; };
+		FE16808226FCB8D50065DAE3 /* sliceHitEnemy.sks in Resources */ = {isa = PBXBuildFile; fileRef = FE16807726FCB8D50065DAE3 /* sliceHitEnemy.sks */; };
+		FE16808326FCB8D50065DAE3 /* sliceBombFuse.caf in Resources */ = {isa = PBXBuildFile; fileRef = FE16807826FCB8D50065DAE3 /* sliceBombFuse.caf */; };
+		FE16808426FCB8D50065DAE3 /* explosion.caf in Resources */ = {isa = PBXBuildFile; fileRef = FE16807926FCB8D50065DAE3 /* explosion.caf */; };
+		FE16808526FCB8D50065DAE3 /* swoosh3.caf in Resources */ = {isa = PBXBuildFile; fileRef = FE16807A26FCB8D50065DAE3 /* swoosh3.caf */; };
+		FE16808626FCB8D50065DAE3 /* wrong.caf in Resources */ = {isa = PBXBuildFile; fileRef = FE16807B26FCB8D50065DAE3 /* wrong.caf */; };
+		FE16808726FCB8D50065DAE3 /* sliceHitBomb.sks in Resources */ = {isa = PBXBuildFile; fileRef = FE16807C26FCB8D50065DAE3 /* sliceHitBomb.sks */; };
+		FE16808826FCB8D50065DAE3 /* swoosh1.caf in Resources */ = {isa = PBXBuildFile; fileRef = FE16807D26FCB8D50065DAE3 /* swoosh1.caf */; };
+		FE16808926FCB8D50065DAE3 /* swoosh2.caf in Resources */ = {isa = PBXBuildFile; fileRef = FE16807E26FCB8D50065DAE3 /* swoosh2.caf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		FE16806A26FCB2AD0065DAE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE16806C26FCB2AE0065DAE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE16806E26FCB2AE0065DAE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE16807426FCB8D50065DAE3 /* whack.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = whack.caf; path = "../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/6FD1C2E1-218B-4091-A41A-870BEC557596/Content/whack.caf"; sourceTree = "<group>"; };
+		FE16807526FCB8D50065DAE3 /* sliceFuse.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = sliceFuse.sks; path = "../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/6FD1C2E1-218B-4091-A41A-870BEC557596/Content/sliceFuse.sks"; sourceTree = "<group>"; };
+		FE16807626FCB8D50065DAE3 /* launch.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = launch.caf; path = "../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/6FD1C2E1-218B-4091-A41A-870BEC557596/Content/launch.caf"; sourceTree = "<group>"; };
+		FE16807726FCB8D50065DAE3 /* sliceHitEnemy.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = sliceHitEnemy.sks; path = "../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/6FD1C2E1-218B-4091-A41A-870BEC557596/Content/sliceHitEnemy.sks"; sourceTree = "<group>"; };
+		FE16807826FCB8D50065DAE3 /* sliceBombFuse.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sliceBombFuse.caf; path = "../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/6FD1C2E1-218B-4091-A41A-870BEC557596/Content/sliceBombFuse.caf"; sourceTree = "<group>"; };
+		FE16807926FCB8D50065DAE3 /* explosion.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = explosion.caf; path = "../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/6FD1C2E1-218B-4091-A41A-870BEC557596/Content/explosion.caf"; sourceTree = "<group>"; };
+		FE16807A26FCB8D50065DAE3 /* swoosh3.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = swoosh3.caf; path = "../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/6FD1C2E1-218B-4091-A41A-870BEC557596/Content/swoosh3.caf"; sourceTree = "<group>"; };
+		FE16807B26FCB8D50065DAE3 /* wrong.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = wrong.caf; path = "../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/6FD1C2E1-218B-4091-A41A-870BEC557596/Content/wrong.caf"; sourceTree = "<group>"; };
+		FE16807C26FCB8D50065DAE3 /* sliceHitBomb.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = sliceHitBomb.sks; path = "../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/6FD1C2E1-218B-4091-A41A-870BEC557596/Content/sliceHitBomb.sks"; sourceTree = "<group>"; };
+		FE16807D26FCB8D50065DAE3 /* swoosh1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = swoosh1.caf; path = "../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/6FD1C2E1-218B-4091-A41A-870BEC557596/Content/swoosh1.caf"; sourceTree = "<group>"; };
+		FE16807E26FCB8D50065DAE3 /* swoosh2.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = swoosh2.caf; path = "../../../../../Library/Containers/com.apple.mail/Data/Library/Mail Downloads/6FD1C2E1-218B-4091-A41A-870BEC557596/Content/swoosh2.caf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +85,17 @@
 				FE16806926FCB2AD0065DAE3 /* Main.storyboard */,
 				FE16806C26FCB2AE0065DAE3 /* Assets.xcassets */,
 				FE16806E26FCB2AE0065DAE3 /* Info.plist */,
+				FE16807926FCB8D50065DAE3 /* explosion.caf */,
+				FE16807626FCB8D50065DAE3 /* launch.caf */,
+				FE16807826FCB8D50065DAE3 /* sliceBombFuse.caf */,
+				FE16807526FCB8D50065DAE3 /* sliceFuse.sks */,
+				FE16807C26FCB8D50065DAE3 /* sliceHitBomb.sks */,
+				FE16807726FCB8D50065DAE3 /* sliceHitEnemy.sks */,
+				FE16807D26FCB8D50065DAE3 /* swoosh1.caf */,
+				FE16807E26FCB8D50065DAE3 /* swoosh2.caf */,
+				FE16807A26FCB8D50065DAE3 /* swoosh3.caf */,
+				FE16807426FCB8D50065DAE3 /* whack.caf */,
+				FE16807B26FCB8D50065DAE3 /* wrong.caf */,
 			);
 			path = project23;
 			sourceTree = "<group>";
@@ -124,9 +157,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE16808726FCB8D50065DAE3 /* sliceHitBomb.sks in Resources */,
+				FE16808826FCB8D50065DAE3 /* swoosh1.caf in Resources */,
+				FE16808426FCB8D50065DAE3 /* explosion.caf in Resources */,
 				FE16806B26FCB2AD0065DAE3 /* Main.storyboard in Resources */,
+				FE16808226FCB8D50065DAE3 /* sliceHitEnemy.sks in Resources */,
+				FE16808126FCB8D50065DAE3 /* launch.caf in Resources */,
 				FE16806226FCB2AD0065DAE3 /* GameScene.sks in Resources */,
+				FE16808326FCB8D50065DAE3 /* sliceBombFuse.caf in Resources */,
+				FE16808026FCB8D50065DAE3 /* sliceFuse.sks in Resources */,
 				FE16806D26FCB2AE0065DAE3 /* Assets.xcassets in Resources */,
+				FE16808926FCB8D50065DAE3 /* swoosh2.caf in Resources */,
+				FE16807F26FCB8D50065DAE3 /* whack.caf in Resources */,
+				FE16808626FCB8D50065DAE3 /* wrong.caf in Resources */,
+				FE16808526FCB8D50065DAE3 /* swoosh3.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +331,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = socialdeal.project23;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -305,7 +349,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = socialdeal.project23;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
