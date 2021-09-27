@@ -104,9 +104,8 @@ class GameScene: SKScene {
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
-        if isGameEnded {
-            return
-        }
+        guard isGameEnded == false else { return }
+        
         guard let touch = touches.first else { return }
         let location = touch.location(in: self)
         activeSlicePoints.append(location)
@@ -174,9 +173,7 @@ class GameScene: SKScene {
     }
     
     func endGame(triggeredByBomb: Bool) {
-        if isGameEnded {
-                return
-            }
+        guard isGameEnded == false else { return }
 
             isGameEnded = true
             physicsWorld.speed = 0
@@ -391,9 +388,7 @@ class GameScene: SKScene {
     }
     
     func tossEnemies() {
-        if isGameEnded {
-            return
-        }
+        guard isGameEnded == false else { return }
         
         popupTime *= 0.991
         chainDelay *= 0.99
