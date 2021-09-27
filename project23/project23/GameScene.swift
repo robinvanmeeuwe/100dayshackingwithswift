@@ -110,6 +110,19 @@ class GameScene: SKScene {
         if !isSwooshSoundActive {
             playSwooshSound()
         }
+        
+        let nodesAtPoint = nodes(at: location)
+        
+        for node in nodesAtPoint {
+            if node.name == "enemy" {
+                if let emitter = SKEmitterNode(fileNamed: "sliceHitEnemy") {
+                    emitter.position = node.position
+                    addChild(emitter)
+                }
+            } else if node.name == "bomb" {
+                //destroy bomb
+            }
+        }
     }
     
     func playSwooshSound() {
