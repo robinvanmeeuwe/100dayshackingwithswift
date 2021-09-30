@@ -80,7 +80,7 @@ attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 24), range
 attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 32), range: NSRange(location: 10, length: 4))
 attributedString.addAttribute(.font, value: UIFont.systemFont(ofSize: 40), range: NSRange(location: 15, length: 6))
 extension String {
-    func withPrefix(_ withPrefix: String) -> {
+    func withPrefix(_ withPrefix: String) -> String {
         let str = "Hello! Swift"
         str.prefix(100)    }
 }
