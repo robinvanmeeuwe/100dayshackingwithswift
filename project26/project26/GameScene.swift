@@ -17,15 +17,21 @@ enum CollisionTypes: UInt32 {
 }
 
 class GameScene: SKScene {
-    
+    var player: SKSpriteNode!
+    var lastTouchPosition: CGPoint?
     
     
     override func didMove(to view: SKView) {
+        loadLevel()
+        createPlayer()
+        
         let background = SKSpriteNode(imageNamed: "background.jpg")
         background.position = CGPoint(x: 512, y: 384)
         background.blendMode = .replace
         background.zPosition = -1
         addChild(background)
+        
+        physicsWorld.gravity = .zero
     }
     
     func loadLevel() {
@@ -87,11 +93,50 @@ class GameScene: SKScene {
                     node.physicsBody?.collisionBitMask = 0
                     node.position = position
                     addChild(node)
-                } else {
+                }else if letter == " "{
+                    
+                }else {
                     fatalError("unkown level letter: \(letter)")
                 }
                 
             }
+        }
+    }
+    
+    func createPlayer() {
+        player = SKSpriteNode(imageNamed: "player")
+        player.position = CGPoint(x: 96, y: 672)
+        player.zPosition = 1
+        player.physicsBody = SKPhysicsBody(circleOfRadius: player.size.width / 2)
+        player.physicsBody?.allowsRotation = false
+        player.physicsBody?.linearDamping = 0.5
+         
+        player.physicsBody?.categoryBitMask = CollisionTypes.player.rawValue
+        player.physicsBody?.contactTestBitMask = CollisionTypes.star.rawValue  | CollisionTypes.vortex.rawValue | CollisionTypes.finish.rawValue
+        player.physicsBody?.collisionBitMask = CollisionTypes.wall.rawValue
+        addChild(player)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let location = touch.location(in: self)
+        lastTouchPosition = location
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else {return}
+        let location = touch.location(in: self)
+        lastTouchPosition = location
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        lastTouchPosition = nil
+    }
+    
+    override func update(_ currentTime: TimeInterval) {
+        if let lastTouchPosition = lastTouchPosition {
+            let diff = CGPoint(x: lastTouchPosition.x - player.position.x, y: lastTouchPosition.y - player.position.y)
+            physicsWorld.gravity = CGVector(dx: diff.x, dy: diff.y)
         }
     }
     
