@@ -14,6 +14,7 @@
 		FECF2BF4270AE89100626C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECF2BF2270AE89100626C06 /* Main.storyboard */; };
 		FECF2BF6270AE89200626C06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FECF2BF5270AE89200626C06 /* Assets.xcassets */; };
 		FECF2BF9270AE89200626C06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECF2BF7270AE89200626C06 /* LaunchScreen.storyboard */; };
+		FECF2C00270AFC0800626C06 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = FECF2BFF270AFC0800626C06 /* level1.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		FECF2BF3270AE89100626C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FECF2BF5270AE89200626C06 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FECF2BF8270AE89200626C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FECF2BFF270AFC0800626C06 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = level1.txt; path = "../../../../../Downloads/HackingWithSwift-main/Classic/project26-files/Content/level1.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FECF2BF0270AE89100626C06 /* GameViewController.swift */,
 				FECF2BF2270AE89100626C06 /* Main.storyboard */,
 				FECF2BF5270AE89200626C06 /* Assets.xcassets */,
+				FECF2BFF270AFC0800626C06 /* level1.txt */,
 				FECF2BF7270AE89200626C06 /* LaunchScreen.storyboard */,
 			);
 			path = project26;
@@ -126,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FECF2C00270AFC0800626C06 /* level1.txt in Resources */,
 				FECF2BF4270AE89100626C06 /* Main.storyboard in Resources */,
 				FECF2BEB270AE89100626C06 /* GameScene.sks in Resources */,
 				FECF2BF6270AE89200626C06 /* Assets.xcassets in Resources */,
