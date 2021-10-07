@@ -41,6 +41,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         loadLevel()
         createPlayer()
         
+        
+    }
+    
+    func loadLevel() {
+        if levelComplete == true {
+            
+        }
+        
         let background = SKSpriteNode(imageNamed: "background.jpg")
         background.position = CGPoint(x: 512, y: 384)
         background.blendMode = .replace
@@ -48,7 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(background)
         
         scoreLabel = SKLabelNode(fontNamed: "Chalkduster")
-        scoreLabel.text = "Score: 0"
+        scoreLabel.text = "Score: \(score)"
         scoreLabel.horizontalAlignmentMode = .left
         scoreLabel.position = CGPoint(x: 16, y: 16)
         scoreLabel.zPosition = 2
@@ -59,9 +67,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         motionManager = CMMotionManager()
         motionManager.startAccelerometerUpdates()
-    }
-    
-    func loadLevel() {
+        
         guard let levelURL = Bundle.main.url(forResource: "level\(level)", withExtension: "txt") else
         {fatalError("Could not find level\(level).txt in the app bundle.") }
         guard let levelString = try? String(contentsOf: levelURL) else
@@ -70,7 +76,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         }
         
-
+        
         
         let lines = levelString.components(separatedBy: "\n")
         
@@ -212,35 +218,37 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             node.removeFromParent()
             score += 1
         } else if node.name == "finish" {
-            levelComplete = true
-            let move = SKAction.move(to: node.position, duration: 0.25)
-            let scale = SKAction.scale(to: 0.0001, duration: 0.1)
-            let remove = SKAction.removeFromParent()
-            let sequence = SKAction.sequence([move, scale, remove])
-            level += 1
-            score += 10
-            player.run(sequence) { [weak self] in
-                self?.createPlayer()
-                self?.removeAllActions()
-                self?.removeAllChildren()
-                self?.loadLevel()
-                self?.levelComplete = false
-            }
             
-            //          levelUp()
+            
+            levelUp()
         }
     }
     
-    //    func levelUp() {
+    func levelUp() {
+        
+        levelComplete = true
+        let move = SKAction.move(to: position, duration: 0.25)
+        let scale = SKAction.scale(to: 0.0001, duration: 0.1)
+        let remove = SKAction.removeFromParent()
+        let sequence = SKAction.sequence([move, scale, remove])
+        level += 1
+        score += 10
+        player.run(sequence) { [weak self] in
+            
+            self?.removeAllActions()
+            self?.removeAllChildren()
+            self?.loadLevel()
+            self?.createPlayer()
+            self?.levelComplete = false
+            
+            
+        }
+        
+        
+        
+        
+    }
     
-    //       if levelComplete == true {
-    //            level += 1
-
-    
-    
-    
-    //      }
-    // }
 }
 
 
