@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(saveSecretMessage), name: UIApplication.willResignActiveNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillHideNotification, object: nil)
         notificationCenter.addObserver(self, selector: #selector(adjustForKeyboard), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         // Do any additional setup after loading the view.
@@ -39,8 +40,24 @@ class ViewController: UIViewController {
         secret.scrollRangeToVisible(selectedRange)
     }
     @IBAction func authenticateTapped(_ sender: Any) {
+        unlockSecretMessage()
+    }
+    func unlockSecretMessage() {
+        secret.isHidden = false
+        title = "secret stuff"
+        
+        secret.text = KeychainWrapper.standard.string(forKey: "SecretMessage") ??
+            ""
     }
     
+    @objc func saveSecretMessage() {
+        guard secret.isHidden == false else { return }
+        
+        KeychainWrapper.standard.set(secret.text, forKey: "Secretmessage")
+        secret.resignFirstResponder()
+        secret.isHidden = true
+        title = "nothing to see here"
+    }
 
 }
 
