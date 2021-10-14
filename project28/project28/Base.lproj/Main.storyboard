@@ -78,7 +78,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="X09-B9-Mco"/>
                     <connections>
-                        <outlet property="imageViewAuthenticator" destination="jOf-Fk-vlp" id="57b-jH-5MK"/>
                         <outlet property="secret" destination="Ozg-6o-XBt" id="C1W-YV-qa5"/>
                     </connections>
                 </viewController>
