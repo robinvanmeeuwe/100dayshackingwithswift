@@ -39,6 +39,9 @@ class GameViewController: UIViewController {
             view.showsFPS = true
             view.showsNodeCount = true
         }
+        
+        angleChanged(self)
+        velocityChanged(self)
     }
 
     override var shouldAutorotate: Bool {
@@ -65,6 +68,31 @@ class GameViewController: UIViewController {
     }
     
     @IBAction func launch(_ sender: Any) {
+        angleSlider.isHidden = true
+        angleLabel.isHidden = true
+        
+        velocitySlider.isHidden = true
+        velocityLabel.isHidden = true
+        
+        launchButton.isHidden = true
+        
+        currentGame?.launch(angle: Int(angleSlider.value), velocity: Int(velocitySlider.value))
+    }
+    
+    func activatePlayer(number: Int) {
+        if number == 1 {
+            playerNumber.text = "<<< PLAYER 1"
+        } else {
+            playerNumber.text = "PLAYER 2 >>>"
+        }
+        
+        angleSlider.isHidden = false
+        angleLabel.isHidden = false
+        
+        velocitySlider.isHidden = false
+        velocityLabel.isHidden = false
+        
+        launchButton.isHidden = false
     }
     
     
