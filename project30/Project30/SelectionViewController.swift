@@ -67,6 +67,7 @@ class SelectionViewController: UITableViewController {
 		let renderer = UIGraphicsImageRenderer(size: original.size)
 
 		let rounded = renderer.image { ctx in
+            ctx.cgContext.addEllipse(in: CGRect(origin: CGPoint.zero, size: <#T##CGSize#>))
 			ctx.cgContext.addEllipse(in: CGRect(origin: CGPoint.zero, size: original.size))
 			ctx.cgContext.clip()
 
